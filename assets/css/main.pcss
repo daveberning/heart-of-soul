@@ -1,19 +1,28 @@
-@import './_vars.pcss';
-@import './_transitions.pcss';
-@import './_globals.pcss';
+@import '_typography.pcss';
+@import '_grids.pcss';
 
-/* @layer base START */
-@import './_typography.pcss';
-@import './_forms.pcss';
-@import './_grid.pcss';
-@import './_cards.pcss';
-/* @layer base END */
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-/* @layer components START */
-@import './_btns.pcss';
-/* @layer components END */
+.grid-5 {
+  @apply grid;
+  @apply md:grid-cols-2;
+  @apply lg:grid-cols-5;
+  @apply gap-4;
+}
+
+.btn-cta {
+  display: inline-block;
+  @apply bg-cta;
+  @apply text-white;
+  @apply py-3;
+  @apply px-6;
+  @apply rounded;
+  @apply text-neutral-900;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* If you need to let Tailwind classes overwrite your own classes, they need to be beneath this */

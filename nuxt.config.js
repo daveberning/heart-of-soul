@@ -6,22 +6,13 @@ export default defineNuxtConfig({
   generate: {
     fallback: true
   },
-  // ? The env/runtimeConfig Property: https://v3.nuxtjs.org/guide/features/runtime-config/
   runtimeConfig: {
-    // The private keys which are only available within server-side. DON’T PUBLISH SECRETS IN CLEAR TEXT TO GIT. Use environment variables instead.
     apiSecret: '123',
-    // Keys within public, will be also exposed to the client-side
     public: {
-      url:
-        process.env.NODE_ENV === 'production'
-          ? process.env.URL || 'http://createADotEnvFileAndSetURL'
-          : 'http://localhost:3000',
+      url: process.env.NODE_ENV === 'production' ? process.env.URL || 'http://createADotEnvFileAndSetURL' : 'http://localhost:3000',
       lang: SITE_INFO.sitelang || 'en-US'
     }
   },
-  /*
-   ** Headers of the page
-   */
   head: {
     title: SITE_INFO.sitename || process.env.npm_package_name || '',
     meta: [
@@ -68,31 +59,21 @@ export default defineNuxtConfig({
    ** Global CSS
    */
   css: ['@/assets/css/main.pcss'],
-  /*
-   ** Plugins to load before mounting the App
-   */
   plugins: [],
-  /*
-   ** Nuxt.js modules
-   */
-  modules: ['@nuxt/content', '@vite-pwa/nuxt', '@nuxtjs/color-mode', '@nuxtjs/tailwindcss', 'nuxt-svgo' ],
-  /*
-   ** Build configuration
-   */
+  modules: [
+    '@nuxt/content',
+    '@vite-pwa/nuxt',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    'nuxt-svgo'
+  ],
   build: {
     extractCSS: true,
   },
-  /*
-   ** Custom additions configuration
-   */
-  // ? The content property: https://content.nuxtjs.org/configuration
   content: {
     dir: 'content',
     highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark',
-      }
+      theme: { default: 'github-light', dark: 'github-dark' }
     }
   },
   tailwindcss: {
@@ -106,9 +87,7 @@ export default defineNuxtConfig({
     fallback: COLOR_MODE_FALLBACK, // fallback value if not system preference found
     componentName: 'ColorScheme',
     cookie: {
-      options: {
-        sameSite: 'lax'
-      }
+      options: { sameSite: 'lax' }
     }
   },
   pwa: {

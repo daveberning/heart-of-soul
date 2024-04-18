@@ -13,28 +13,44 @@ module.exports = {
         sans: ['Inter']
       },
       colors: {
-        gray: {
-          '50': 'var(--color-gray-50)', // #F9FAFB
-          '100': 'var(--color-gray-100)', // #F3F4F6
-          '200': 'var(--color-gray-200)', // #E5E7EB
-          '300': 'var(--color-gray-300)', // #D1D5DB
-          '400': 'var(--color-gray-400)', // #9CA3AF
-          DEFAULT: 'var(--color-gray)', // #6B7280
-          '600': 'var(--color-gray-600)', // #4B5563
-          '700': 'var(--color-gray-700)', // #374151
-          '800': 'var(--color-gray-800)', // #1F2937
-          '900': 'var(--color-gray-900)' // #111827
-        },
         primary: {
-          '100': 'var(--color-primary-100)', // #ECEFF5
-          '200': 'var(--color-primary-200)', // #C3CBDC
-          '300': 'var(--color-primary-300)', // #9BA8C2
-          '400': 'var(--color-primary-400)', // #7686A6
-          DEFAULT: 'var(--color-primary)', // #526488
-          '600': 'var(--color-primary-600)', // #3E4F70
-          '700': 'var(--color-primary-700)', // #2C3A57
-          '800': 'var(--color-primary-800)', // #1C263B
-          '900': 'var(--color-primary-900)' // #0D131E
+          100: '#E8E0F2',
+          200: '#D9C0E9',
+          300: '#C99FE0',
+          400: '#B97ED7',
+          500: '#A85DD0',
+          DEFAULT: '#401466',
+          600: '#8A3CBE',
+          700: '#6F2FAB',
+          800: '#5B2493',
+          900: '#2F0F4C'
+        },
+        secondary: {
+          100: '#E0F2F2',
+          200: '#B2E9E9',
+          300: '#80E0E0',
+          400: '#4ED7D7',
+          500: '#1FB8A7',
+          DEFAULT: '#1FB8A7',
+          600: '#1A9A8F',
+          700: '#147E77',
+          800: '#0F625F',
+          900: '#0A3F3B'
+        },
+        tertiary: {
+          100: '#F2E0E0',
+          200: '#E9B2B2',
+          300: '#E08080',
+          400: '#D74E4E',
+          500: '#A71F1F',
+          DEFAULT: '#A61020',
+          600: '#8F0F1A',
+          700: '#77147E',
+          800: '#5F0F62',
+          900: '#3B0A3F'
+        },
+        cta: {
+          DEFAULT: '#E6B83F',
         }
       },
       screens: {

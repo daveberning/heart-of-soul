@@ -1,7 +1,5 @@
 <template>
-  <div class="wrapper">
-    <Header />
-    <slot />
-    <ColorModePicker />
-  </div>
+  <site-header />
+  <slot />
+  <site-footer />
 </template>
