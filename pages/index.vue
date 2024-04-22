@@ -1,13 +1,10 @@
 <template>
   <main>
     <hero />
-    <section id="featured">
-      <div class="container">
-        <h2>New Food Weekly</h2>
-        <p>New menu items and meals will be prepared and available each week. Our menu will change frequently so please reach out to see what we're cooking in the kitchen!</p>
-        <a href="#" class="btn-cta mt-8">Ask the Chef</a>
-      </div>
-    </section>
+    <featured-content title="New Food Weekly">
+      <p>New menu items and meals will be prepared and available each week. Our menu will change frequently so please reach out to see what we're cooking in the kitchen!</p>
+      <a href="#" class="btn-cta mt-8">Ask the Chef</a>
+    </featured-content>
     <section id="featured-menu-items">
       <div class="container m-auto">
         <h3 class="mb-4">Featured Menu Items</h3>
@@ -20,6 +17,8 @@
 </template>
 
 <script setup>
+import FeaturedContent from '~/components/FeaturedContent.vue'
+
 const menuItems = await queryContent(`/menu`).find()
 const featuredItems = computed(() => menuItems.filter((item) => item.featured && item.active))
 </script>
@@ -29,16 +28,5 @@ section {
   @apply px-4;
   @apply py-20;
   @apply bg-neutral-100;
-}
-
-#featured {
-  text-align: center;
-  @apply bg-primary-200;
-  @apply text-primary;
-
-  h2 {
-    @apply text-5xl;
-    font-weight: 900;
-  }
 }
 </style>

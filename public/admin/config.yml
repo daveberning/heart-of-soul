@@ -28,6 +28,7 @@ collections:
           - { label: 'Site Name', name: 'sitename', widget: 'string', hint: 'This is used for the site title' }
           - { label: 'Site Description', name: 'sitedescription', widget: 'string', hint: 'This is used as descriptive text for links that link to this site' }
           - { label: 'Site Email', name: 'siteemail', widget: 'string', required: false }
+          - { label: 'Site Phone', name: 'sitephone', widget: 'string', required: false }
   - name: 'pages'
     label: 'Pages'
     folder: 'content/pages'

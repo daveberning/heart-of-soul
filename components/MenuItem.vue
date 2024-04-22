@@ -4,9 +4,9 @@
       <img :src="item.image" alt="">
       <p>${{ item.price }} USD</p>
     </div>
-    <div class="p-4">
+    <div class="px-4 py-8">
       <p class="text-xl mb-4">{{ item.title }}</p>
-      <div v-html="item.shortDescription" />
+      <p v-html="item.shortDescription" />
     </div>
   </div>
 </template>
@@ -52,7 +52,7 @@ p:first-child {
 
 .image p {
   position: absolute;
-  font-size: .75rem;
+  font-size: .9rem;
   bottom: 1rem;
   right: 1rem;
   font-weight: 700;
