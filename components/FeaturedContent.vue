@@ -27,8 +27,12 @@ defineProps({
   @apply text-primary;
 
   h2 {
-    @apply text-5xl;
+    @apply text-3xl;
     font-weight: 900;
+
+    @media screen and (min-width: 768px) {
+      @apply text-5xl;
+    }
   }
 }
 </style>

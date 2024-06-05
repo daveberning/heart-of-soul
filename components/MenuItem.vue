@@ -2,7 +2,7 @@
   <div class="menu-item">
     <div class="image">
       <img :src="item.image" alt="">
-      <p>${{ item.price }} USD</p>
+      <p>${{ item.price.toFixed(2) }} USD</p>
     </div>
     <div class="px-4 py-8">
       <p class="text-xl mb-4">{{ item.title }}</p>

@@ -10,6 +10,8 @@
 </template>
 
 <script setup>
+import siteInfo from '~/content/site/info.json'
+
 const menuItems = await queryContent(`/menu`).find()
 
 const sections = computed(() => [
@@ -20,6 +22,10 @@ const sections = computed(() => [
 ])
 
 const availableSections = computed(() => sections.value.filter((section) => section.items.length))
+
+useHead({
+  title: `Menu | ${siteInfo.sitename}`,
+})
 </script>
 
 <style lang="postcss" scoped>

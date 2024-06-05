@@ -6,8 +6,8 @@
         <ul>
           <li><nuxt-link to="/menu">Menu</nuxt-link></li>
           <li><nuxt-link to="/about">About</nuxt-link></li>
-          <li><nuxt-link to="/menu">Contact Us</nuxt-link></li>
-          <li><button class="btn-cta">Call to Order</button></li>
+          <li><nuxt-link to="/contact">Contact Us</nuxt-link></li>
+          <li><a :href="`tel:${siteInfo.sitephone}`" class="btn-cta">Call to Order</a></li>
         </ul>
       </nav>
     </div>
@@ -31,13 +31,18 @@ header {
 .container {
   display: flex;
   justify-content: space-between;
-
+  flex-direction: column;
+  align-items: center;
   @apply m-auto;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 div > a:first-child {
   font-family: "Great Vibes", cursive !important;
-  line-height: 2.5rem;
+  line-height: 3rem;
   margin: 0;
   font-size: 1.5rem;
 }

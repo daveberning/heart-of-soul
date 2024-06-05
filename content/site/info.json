@@ -1,7 +1,11 @@
 {
+  "heroimage": "/img/lily-banse-yhswy6uqvk-unsplash.jpg",
+  "sitephone": "419-578-8028",
   "sitename": "Rhonda & Naya Heart of Soul",
-  "sitedescription": "NTN Boilerplate description",
-  "sitelang": "en-US",
+  "address": "2672 Ridgecrest Dr, Florence, KY 41042",
   "siteemail": "Rhondanayaheartofsoul@gmail.com",
-  "sitephone": "419-578-8028"
+  "sitelang": "en-US",
+  "sitedescription": "Homecooked soul food of Greater Cincinnati",
+  "herotitle": "Delicious and Authentic Soul Food",
+  "herocontent": "We take pride in offering a wide variety of mouthwatering dishes that are made with only the freshest and highest quality ingredients."
 }
