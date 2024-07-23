@@ -3,14 +3,16 @@
     <div class="container">
       <h1>Contact Us</h1>
       <div class="contact-wrapper">
-        <form action="">
-        <div v-for="field in fields" :class="field.type">
-          <label :for="field.id">{{ field.label }}</label>
-          <input v-if="field.type !== 'textarea'" :id="field.id" :type="field.type" required>
-          <textarea v-else :id="field.id" rows="10" required></textarea>
-        </div>
-        <button type="submit" class="btn-cta">Submit</button>
-      </form>
+        <form name="contact" action="/contact/success" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+          <input name="bot-field" />
+          <div v-for="field in fields" :class="field.type">
+            <label :for="field.id" :id="field.id">{{ field.label }}</label>
+            <input v-if="field.type !== 'textarea'" :id="field.id" :name="field.id" :type="field.type" required>
+            <textarea v-else :id="field.id" rows="10" required></textarea>
+          </div>
+          <input type="hidden" name="contact-form" value="contact_form" />
+          <button type="submit" class="btn-cta">Submit</button>
+        </form>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d775.4828723461848!2d-84.68183633037488!3d38.97123234088972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8841c698774415c1%3A0xe8d227bae1826e24!2s2672%20Ridgecrest%20Dr%2C%20Florence%2C%20KY%2041042!5e0!3m2!1sen!2sus!4v1713751084962!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -47,6 +49,10 @@ form {
   margin-top: 1rem;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
+}
+
+[name="bot-field"] {
+  display: none;
 }
 
 input,
